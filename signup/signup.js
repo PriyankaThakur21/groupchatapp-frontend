@@ -8,7 +8,7 @@ async function signup(event){
     try{
     const post=await axios.post('http://localhost:3000/signup',obj);
     alert(post.data);
-    location.href='./login.html';
+    location.href='../login/login.html';
     }
     catch(err){
     console.log(err)
