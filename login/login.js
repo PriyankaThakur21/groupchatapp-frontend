@@ -5,8 +5,10 @@ async function login(event){
     const obj = {email, password};
     try{
     const post=await axios.post('http://localhost:3000/login',obj);
-    alert(post.data);
-    location.href='./login.html';
+    console.log(post.data)
+    alert(post.data.message);
+    location.href='../chatApp/chatApp.html';
+    localStorage.setItem('token', post.data.token)
     }
     catch(err){
     console.log(err)
