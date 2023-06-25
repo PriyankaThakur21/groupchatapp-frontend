@@ -13,15 +13,16 @@
 		</div>
 		<div class="float-left"><input type="search" name="search" id="search" placeholder="search"></div>
 	  </header>
-      <div id="block" class=" text-center"></div>
-      <div id="block2" class="container-fluid w-75"></div>
-      <div class="fixed-bottom card-body container-fluid w-75">
-        <form class="mx-1 mx-md-4 d-flex" onsubmit="chat(event)">
-            <input type="text" class="form-control m-2" name="msg" id="msg" placeholder="Enter Message">
-            <input type="submit" class="btn float-right mb-2" style="background-color: #dab201; color: white;" value="Send">
-       </form>
+      <div>
+        <button class="float-right mr-5"><a href="./newgroup.html">New group</a></button>
       </div>
-<script src="chatApp.js"></script>
+      <div class="row">
+        <div class="w-25 form-control">
+          <h3>Groups</h3>
+          <div id="block"></div>
+        </div>
+      </div>
+<script src="groups.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
 </body>
 </html>

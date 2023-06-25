@@ -7,7 +7,7 @@ async function login(event){
     const post=await axios.post('http://localhost:3000/login',obj);
     console.log(post.data)
     alert(post.data.message);
-    location.href='../chatApp/chatApp.html';
+    location.href='../groups/groups.html';
     localStorage.setItem('token', post.data.token)
     }
     catch(err){

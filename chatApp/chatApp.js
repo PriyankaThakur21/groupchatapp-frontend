@@ -35,14 +35,14 @@ getallmsg();
 function showmsgonscreen(msg){
     const msgBox = document.getElementById('block2');
     msgBox.innerHTML="";
-    msg.chat.forEach(m => {
-        if(m.userId === msg.id){
-            msgBox.innerHTML += `<div style="display:flex; justify-content: flex-end;"><h5>${m.message}</h5></div>`;
+    for(let i in msg.chat){
+        if(msg.chat[i].userId === msg.id){
+                msgBox.innerHTML += `<div style="display:flex; justify-content: flex-end;"><h5>${msg.chat[i].message}</h5></div>`;
         }
         else{
-            msgBox.innerHTML += `<div><h5>${m.message}</h5></div>`;
+                msgBox.innerHTML += `<div><h5>${msg.name}: ${msg.chat[i].message}</h5></div>`;
         }
-});
+};
 }
 
 async function chat(event){
