@@ -1,3 +1,5 @@
+const socket = io('http://localhost:3000');
+
 window.addEventListener('DOMContentLoaded', async ()=>{
     const groupid = localStorage.getItem('group');
     try{
@@ -83,8 +85,6 @@ async function chat(event){
     }
 }
 
-function showScreen(){
-    setInterval(()=>{
+socket.on('connection', ()=>{
         getallmsg()
-    },1000)
-    }
+    })
