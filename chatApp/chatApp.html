@@ -7,12 +7,20 @@
     <title>Group chat App</title>
 </head>
 <body>
-    <header id="main-header" class="text-white p-4 mb-3" style="display: flex; background-color:#dab201;">
+    <header id="main-header" class="text-white p-4 mb-1" style="display: flex; background-color:#dab201;">
 		<div class="container">
 		  <h1 id="header-title">Group Chat App<span style="display:none">123</span></h1>
 		</div>
 		<div class="float-left"><input type="search" name="search" id="search" placeholder="search"></div>
 	  </header>
+      <div class="text-center mx-auto mb-2" style="background-color: beige;">
+        <h4 id="title"></h4>
+        <div class="row w-75 mx-auto text-center m-3 mt-0">
+          <div class="col"><a href="../admin/admin.html" class="d-flex btn-group">Admin</a></div>
+          <div class="col"><a href="../admin/addmember.html" class="d-flex btn-group justify-content-center">Add Member</a></div>
+          <div class="col"><a href="../admin//removemember.html" onclick="getAllmember" class="d-flex btn-group justify-content-end">Remove Member</a></div>
+          </div>
+      </div>
       <div id="block" class=" text-center"></div>
       <div id="block2" class="container-fluid w-75"></div>
       <div class="fixed-bottom card-body container-fluid w-75">

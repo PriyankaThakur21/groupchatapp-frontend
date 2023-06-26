@@ -22,10 +22,15 @@ window.addEventListener('DOMContentLoaded', async ()=>{
     const element = document.getElementById('block');
     element.innerHTML = "";
     for(let i in groups.data){
-    element.innerHTML += `<div><button class="btn-block btn-light btn-outline-dark mt-3">${groups.data[i].groupName}</button></div>`;
+    element.innerHTML += `<div><button class="btn-info btn-block btn m-3" onclick=chat(${groups.data[i].id})>${groups.data[i].groupName}</button></div>`;
     }
 }
     catch(error){
         console.log(error);
     }
 })
+
+function chat(groupid){
+    const group = localStorage.setItem('group', groupid);
+    location.href = '../chatApp/chatApp.html'
+}
