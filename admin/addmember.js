@@ -8,6 +8,7 @@ async function addmember(event){
     const post=await axios.post(`http://localhost:3000/addmember/${groupid}`,obj, {headers: {"Authorization": token}});
     console.log(post.data)
     alert(post.data.message);
+    location.href = '../chatApp/chatApp.html'
     }
     catch(err){
     console.log(err);

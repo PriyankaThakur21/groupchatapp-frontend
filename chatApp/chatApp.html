@@ -23,14 +23,14 @@
       </div>
       <div id="block" class=" text-center"></div>
       <div id="block2" class="container-fluid w-75"></div>
-      <div class="fixed-bottom card-body container-fluid w-75">
+      <div class="fixed-bottom card-body container-fluid form-check-inline">
         <form class="mx-1 mx-md-4 d-flex" onsubmit="chat(event)">
-            <input type="text" class="form-control m-2" name="msg" id="msg" placeholder="Enter Message">
-            <input type="submit" class="btn float-right mb-2" style="background-color: #dab201; color: white;" value="Send">
+            <input type="text" class=" form-control m-2" name="msg" id="msg" placeholder="Enter Message">
+            <input type="file" class="m-2 form-control w-25" name="file" id="file">
+            <input type="submit" class="btn float-right mb-2 h-25 mt-2" style="background-color: #dab201; color: white;" value="Send">
        </form>
       </div>
 <script src="chatApp.js"></script>
-<script src="http://localhost:3000/socket.io/socket.io.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
 </body>
 </html>
